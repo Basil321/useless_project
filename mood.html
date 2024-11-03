@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Mirror</title>
+    <link rel="stylesheet" href="mood.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Switcher Buttons -->
+    <div class="theme-switcher">
+        <button id="light-mode-btn">Light</button>
+        <button id="dark-mode-btn">Dark</button>
+        <button id="white-mode-btn">White</button>
+    </div>
+    
+    <div class="main-layout">
+        <!-- Sidebar Mood Diary -->
+        <div class="mood-diary-sidebar">
+            <h2>Mood Diary</h2>
+            <div id="mood-diary">
+                <ul id="diary-list"></ul>
+            </div>
+        </div>
+        
+        <!-- Main Content Section -->
+        <div class="container">
+            <h1>Mood Mirror</h1>
+            
+            <!-- Mood Selector and Display -->
+            <div class="mood-selector">
+                <select id="moodImage">
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="angry">Angry</option>
+                    <option value="surprised">Surprised</option>
+                    <option value="love">Love</option>
+                    <option value="pwollimood">Pwollimood</option>
+                </select>
+                <button id="show-mood-btn">Show Mood</button>
+                <button id="random-mood-btn">Random Mood</button>
+            </div>
+            
+            <!-- Mood Display Section -->
+            <div id="mood-display" class="mood-display"></div>
+            
+            <!-- Music Player Controls -->
+            <div class="music-controls">
+                <button id="prev-track-btn">Previous</button>
+                <button id="next-track-btn">Next</button>
+                <p id="current-track">No track playing.</p>
+            </div>
+            
+            <!-- Music Player -->
+            <audio id="mood-music" controls></audio>
+            
+            <button id="save-mood-btn">Save Mood</button>
+            
+            <!-- Streak Display -->
+            <p id="streak-count">Current Streak: 0 day(s)</p>
+        </div>
+    </div>
+    
+    <script src="mood.js"></script>
+</body>
+</html>
